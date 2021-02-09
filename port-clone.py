@@ -1,9 +1,17 @@
+# This script will prompt the user to select an organization, source switch,
+# source port and destination switch and port to clone a port config, before
+# confirming if the user would like to proceed with the change
+
+# Configure your API key ENV variable using 'export MERAKI_DASHBOARD_API_KEY=YOUR_KEY'
+
+# Usage: python port-clone.py
+
 import meraki
 import os
 import re
 import pprint
 
-# Configure your API key ENV variable using 'export MERAKI_DASHBOARD_API_KEY=YOUR_KEY'
+# Instantiate the Meraki Dashboard API using the Python SDK
 dashboard = meraki.DashboardAPI(os.environ['MERAKI_DASHBOARD_API_KEY'])
 
 # Get the list of organizations that the user has priveleges on
