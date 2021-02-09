@@ -81,5 +81,5 @@ while True:
 
 # Configure destination port
 dashboard.switch.updateDeviceSwitchPort(
-    switches[destination_switch]['serial'], destination_port, **port_config
+    destination_switch['serial'], destination_port, **port_config
 )
