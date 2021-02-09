@@ -49,18 +49,16 @@ def get_port_config(serial, port):
     del config['portId']
     return config
 
-print_switches(org_switches)
-
 # Prompt the user for the source switch and source port to be cloned
+print_switches(org_switches)
 source_switch = org_switches[int(input("Which source switch would you like to select? "))]
 source_port = int(input("Which source port would you like to clone? "))
 
 # Store port config to be cloned
 port_config = get_port_config(source_switch['serial'], source_port)
 
-print_switches(org_switches)
-
 # Get the destination switch and port to be configured
+print_switches(org_switches)
 destination_switch = org_switches[int(input("Which destination switch would you like to configure? "))]
 destination_port = int(input("Which destination port would you like to configure? "))
 
