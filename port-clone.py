@@ -29,10 +29,11 @@ org_devices = dashboard.organizations.getOrganizationDevices(
     orgs[selected_org]['id'], total_pages='all'
 )
 
-# Filter the list of devices for only switches
+# Filter a list of devices for only a specific type
 def get_product(devices, type):
     return list(filter(lambda device: re.match(type, device['model']), devices))
 
+# Filter org_devices for just switches
 org_switches = get_product(org_devices, "MS")
 
 # Print the list of switches in the organization
