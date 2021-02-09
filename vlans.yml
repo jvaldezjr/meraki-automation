@@ -1,66 +1,66 @@
 # Example YAML file, this should be updated to reflect the port configs you want
 ---
-  - wan:
-    name: null
-    tags: []
-    enabled: true
-    poeEnabled: true
-    type: access
-    vlan: 999
-    voiceVlan: null
-    allowedVlans: all
-    isolationEnabled: false
-    rstpEnabled: true
-    stpGuard: disabled
-    linkNegotiation: Auto negotiate
-    portScheduleId: null
-    udld: Alert only
-    accessPolicyType: Open
-  - management:
-    name: null
-    tags: []
-    enabled: true
-    poeEnabled: true
-    type: trunk
-    vlan: 50
-    voiceVlan: null
-    allowedVlans: all
-    isolationEnabled: false
-    rstpEnabled: true
-    stpGuard: disabled
-    linkNegotiation: Auto negotiate
-    portScheduleId: null
-    udld: Alert only
-  - wired:
-    name: null
-    tags: []
-    enabled: true
-    poeEnabled: true
-    type: access
-    vlan: 100
-    voiceVlan: null
-    allowedVlans: all
-    isolationEnabled: false
-    rstpEnabled: true
-    stpGuard: disabled
-    linkNegotiation: Auto negotiate
-    portScheduleId: null
-    udld: Alert only
-    accessPolicyType: Open
-  - wireless:
-    name: null
-    tags: []
-    enabled: true
-    poeEnabled: true
-    type: access
-    vlan: 200
-    voiceVlan: null
-    allowedVlans: all
-    isolationEnabled: false
-    rstpEnabled: true
-    stpGuard: disabled
-    linkNegotiation: Auto negotiate
-    portScheduleId: null
-    udld: Alert only
-    accessPolicyType: Open
+wan:
+  name: null
+  tags: []
+  enabled: true
+  poeEnabled: true
+  type: access
+  vlan: 999
+  voiceVlan: null
+  allowedVlans: all
+  isolationEnabled: false
+  rstpEnabled: true
+  stpGuard: disabled
+  linkNegotiation: Auto negotiate
+  portScheduleId: null
+  udld: Alert only
+  accessPolicyType: Open
+management:
+  name: null
+  tags: []
+  enabled: true
+  poeEnabled: true
+  type: trunk
+  vlan: 50
+  voiceVlan: null
+  allowedVlans: all
+  isolationEnabled: false
+  rstpEnabled: true
+  stpGuard: disabled
+  linkNegotiation: Auto negotiate
+  portScheduleId: null
+  udld: Alert only
+wired:
+  name: null
+  tags: []
+  enabled: true
+  poeEnabled: true
+  type: access
+  vlan: 100
+  voiceVlan: null
+  allowedVlans: all
+  isolationEnabled: false
+  rstpEnabled: true
+  stpGuard: disabled
+  linkNegotiation: Auto negotiate
+  portScheduleId: null
+  udld: Alert only
+  accessPolicyType: Open
+wireless:
+  name: null
+  tags: []
+  enabled: true
+  poeEnabled: true
+  type: access
+  vlan: 200
+  voiceVlan: null
+  allowedVlans: all
+  isolationEnabled: false
+  rstpEnabled: true
+  stpGuard: disabled
+  linkNegotiation: Auto negotiate
+  portScheduleId: null
+  udld: Alert only
+  accessPolicyType: Open
 ...
