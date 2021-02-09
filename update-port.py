@@ -50,11 +50,33 @@ def print_switches(switches):
 
 # Prompt the user for the switch and port to be modified as well as the desired role
 print_switches(org_switches)
-source_switch = org_switches[int(input("Which switch would you like to modify? "))]
-source_port = int(input("Which port would you like to update? "))
+switch = org_switches[int(input("Which switch would you like to modify? "))]
+port = int(input("Which port would you like to update? "))
 for i, role in enumerate(port_roles):
     print (i, ":", role)
 role_input = int(input("Which port role should be assigned to the port? "))
 
 # Prepare the port config based on the input role and the yaml configuration
 port_config = port_roles[list(port_roles.keys())[role_input]]
+
+# Confirm the config about to be cloned
+print(f"The following config will be set on {switch['name']} port {port}: ")
+pprint.pprint(port_config)
+
+# Get user consent to proceed
+while True:
+  try:
+    proceed = input("Carry on? (y/n): ")
+    if proceed.lower() == 'n':
+        print("Quitting program...")
+        quit()
+    elif proceed.lower() == 'y':
+      break
+    print("Invalid response entered, please respond with y or n")
+  except Exception as e:
+    print(e)
+
+# Configure destination port
+dashboard.switch.updateDeviceSwitchPort(
+    switch['serial'], port, **port_config
+)
